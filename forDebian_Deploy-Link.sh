@@ -33,6 +33,9 @@ tk-dev \
 git \
 vim
 
+git config --global user.email "dirkkuyt18mf@gmail.com"
+git config --global user.name "qayet1310"
+
 echo Installing pyenv.
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
@@ -43,12 +46,13 @@ git checkout v2.0.3
 echo Updating .bashrc
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 
 # virtualenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+test -r ~/.bashrc && . ~/.bashrc
 source ~/.bash_profile
 echo 
 echo Installing the colorscheme: vim-atom-dark
@@ -57,7 +61,7 @@ mkdir ~/.vim/colors
 git clone https://github.com/gosukiwi/vim-atom-dark 
 cp ./vim-atom-dark/colors/atom-dark-256.vim ~/.vim/colors
 
-
+. ~/.bashrc
 cd $Cpath
 
 
