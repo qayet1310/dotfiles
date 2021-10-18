@@ -11,15 +11,15 @@ echo "
 Cpath=`pwd`
 
 echo Running Update.
-sudo apt-get update
+sudo yum install update
 
 echo 
 echo Running upgrade.
-sudo apt-get upgrade
+sudo yum install upgrade
 
 echo 
 echo Installing packages.
-sudo apt install -y \
+sudo yum install -y \
 build-essential \
 libffi-dev \
 libssl-dev \
