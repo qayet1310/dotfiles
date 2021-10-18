@@ -52,6 +52,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 echo 
 echo Installing the colorscheme: vim-atom-dark
+mkdir ~/.vim
 mkdir ~/.vim/colors
 git clone https://github.com/gosukiwi/vim-atom-dark 
 cp ./vim-atom-dark/colors/atom-dark-256.vim ~/.vim/colors

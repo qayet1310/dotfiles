@@ -27,6 +27,7 @@ echo Installing the Vundle.
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo
 echo Installing the colorscheme: vim-atom-dark
+mkdir ~/.vim
 mkdir ~/.vim/colors
 git clone https://github.com/gosukiwi/vim-atom-dark 
 cp ./vim-atom-dark/colors/atom-dark-256.vim ~/.vim/colors
