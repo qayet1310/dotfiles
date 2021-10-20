@@ -55,9 +55,12 @@ set list listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=2
+set tabstop=8
+set softtabstop=4
 " 行頭でのTab文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
+set autoindent
+set smartindent
 
 
 " 検索系
@@ -75,3 +78,6 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4 
