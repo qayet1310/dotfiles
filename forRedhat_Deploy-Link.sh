@@ -8,18 +8,20 @@ echo "
         /_/          /___/
 "
 
+read passw -p "Password:"
+
 Cpath=`pwd`
 
 echo Running Update.
-sudo yum install update
+echo $passw | sudo -S yum install update
 
 echo 
 echo Running upgrade.
-sudo yum install upgrade
+echo $passw | sudo -S yum install upgrade
 
 echo 
 echo Installing packages.
-sudo yum install -y \
+echo $passw | sudo -S yum install -y \
 build-essential \
 libffi-dev \
 libssl-dev \

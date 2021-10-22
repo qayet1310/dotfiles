@@ -7,19 +7,19 @@ echo "
 /____/l__/ .__/_/|___/|_, /  /____/|___/|__/ /_/ /_/_/|__/___/ (_)
         /_/          /___/
 "
-
+read passw -p "Password:"
 Cpath=`pwd`
 
 echo Running Update.
-sudo apt-get update
+echo $passw | sudo -S apt-get update
 
 echo 
 echo Running upgrade.
-sudo apt-get upgrade
+echo $passw | sudo -S apt-get upgrade
 
 echo 
 echo Installing packages.
-sudo apt install -y \
+echo $passw | sudo -S apt install -y \
 build-essential \
 libffi-dev \
 libssl-dev \

@@ -80,4 +80,4 @@ nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 augroup fileTypeIndent
   autocmd!
-  autocmd BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4 
+  autocmd BufNewFile,BufRead *.py setlocal softtabstop=3 shiftwidth=3 
